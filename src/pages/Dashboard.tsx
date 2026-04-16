@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useAuth } from '../features/auth/AuthContext';
 import api from '../api/axios';
-import Header from '../components/Header';
+import HeaderBS from '../components/HeaderMUI';
 import Sidebar from '../components/Sidebar';
 import MainContent from '../components/MainContent';
 import ProjectForm from '../components/ProjectForm';
@@ -102,7 +102,7 @@ export default function Dashboard() {
 
   return (
     <div className={styles.layout}>
-      <Header
+      <HeaderBS
         title="TaskFlow"
         onMenuClick={() => setSidebarOpen((p) => !p)}
         userName={authState.user?.name}
